@@ -19,7 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 18
+if (votingAge == 18){
+  console.log("true")
+} else {
+  console.log('false')
+}
 
 
 /*
@@ -33,6 +38,14 @@ Do the following:
 
    HINT: no function required
 */
+let firstThing = 1
+let secondThing = 2
+if (firstThing !== secondThing){
+  let firstThing = 2
+  console.log (firstThing)
+} else {
+  console.log("they are the same thing")
+}
 
 
 
@@ -48,6 +61,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+let Year = 1999
+let intergerYear = parseInt(Year)
+console.log(intergerYear)
 
 
 
@@ -61,10 +77,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
+
+
 function multiply(num1, num2){
   return num1 * num2;
 }
-
+console.log ('task 1 d:', multiply(7, 2));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -77,9 +95,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
-}
+function dogYears(yearsOld){
+  return yearsOld * 7
+  }
+console.log( 'task 2', dogYears (5));
 
 
 
@@ -129,10 +148,26 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
-
+function hungryDog(pounds, age ){
+  if (age >= 1 && pounds <= 5){
+    return pounds * 0.05;
+  } else if (age >= 1 && pounds <= 10){
+    return pounds * 0.04;
+  } else if (age >= 1 && pounds <= 15){
+    return pounds * 0.03;
+  } else if (age >= 1 && pounds < 15){
+    return pounds * 0.02;
+  } else if (age >= 0.583 ){
+    return pounds * 0.04;
+  } else if (age >= 0.333 ){
+    return pounds * 0.05;
+  } else if (age >= 0.151 ){
+    return pounds * 0.10;
+  } else {
+    return 'try again'
+  }
+  }
+  console.log('task 3', hungryDog(16,1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -156,9 +191,35 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+let computerChoice = Math.random();
+let choice;
+if (computerChoice >= .666){
+   choice = 'rock'
+} else if (computerChoice >= .333 ){
+   choice = 'paper'
+} else {
+   choice = 'scissors'
 }
+// console.log(choice)
+
+function game(user, computer){
+ console.log('player chose ' + user)
+ console.log('computer chose ' + computer)
+ if (user === computer) {
+ return "it's a tie";
+} else if (
+  (user === "rock" && computer === "scissors") ||
+  (user === "paper" && computer === "rock") ||
+  (user === "scissors" && computer === "paper")
+) {
+ return "you win!";
+} else {
+ return "you lose!";
+}
+}
+let user = 'paper'
+console.log('task 4',game(user, choice));
+
 
 
 
@@ -173,9 +234,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(NumberOfMiles){
+  return NumberOfMiles * 0.621371
 }
+console.log('task 5', miles(7));
+
 
 
 
@@ -187,9 +250,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(Centimeters){
+  return Centimeters / 30.48 
 }
+console.log('task 5 b', feet(100));
 
 
 
@@ -227,9 +291,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if (score >= 90 ){
+    return 'you got an A'
+} else if (score >= 80 ){
+    return 'you got a B'
+} else if (score >= 70 ){
+    return  'you got a C'
+} else if (score >= 60){
+    return  'you got a D'
+} else {
+    return 'you got an F'
 }
+}
+console.log('task 7', grade(86));
+
 
 
 
