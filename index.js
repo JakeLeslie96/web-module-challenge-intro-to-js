@@ -155,7 +155,7 @@ function hungryDog(pounds, age ){
     return pounds * 0.04;
   } else if (age >= 1 && pounds <= 15){
     return pounds * 0.03;
-  } else if (age >= 1 && pounds < 15){
+  } else if (age >= 1 && pounds > 15){
     return pounds * 0.02;
   } else if (age >= 0.583 ){
     return pounds * 0.04;
@@ -203,8 +203,6 @@ if (computerChoice >= .666){
 // console.log(choice)
 
 function game(user, computer){
- console.log('player chose ' + user)
- console.log('computer chose ' + computer)
  if (user === computer) {
  return "it's a tie";
 } else if (
@@ -271,7 +269,7 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
+function annoyingSong(bottles){
       /*add your code here*/
 }
 
